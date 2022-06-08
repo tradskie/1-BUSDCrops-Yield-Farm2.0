@@ -763,7 +763,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 100px;
+  padding-bottom: 100px;
   overflow: hidden;
 }
 
