@@ -988,10 +988,10 @@ section {
 }
 
 .deposits {
-  margin-right: 1rem;
-  margin-left: 1rem;
+  /* margin-right: 1rem; */
+  /* margin-left: 1rem; */
   padding: 15px;
-  /*  width: inherit; */
+  /* width: inherit;
 }
 @media only screen and (max-width: 350px) {
   /* horizontal scrollbar for tables if mobile screen */
