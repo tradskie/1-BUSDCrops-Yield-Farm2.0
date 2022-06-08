@@ -209,3 +209,17 @@
   padding-right: 5px;
   padding-bottom: 0px;
 }
+.mt-1 {
+  margin-top: 0.25rem !important;
+  justify-content: space-evenly;
+}
+@media (min-width: 1200px) {
+  .col-xl-2 {
+  }
+}
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: auto;
+    width: 0%;
+  }
+}

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+  <meta http-equiv="content-type" content="width=device-width, initial-scale=1.0, text/html" name="viewport"
+    charset="utf-8" />
+
+
 
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
 
     <title>BUSD Crops Yield Farmer</title>
     <meta content="" name="description">
@@ -35,6 +38,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
       body {
         background-image: url('assets/img/cropsfarmer2.PNG');
@@ -318,40 +322,41 @@
         <div class="container aos-init aos-animate" data-aos="fade-up">
           <div class="section-title">
             <div class="stats-container">
-              <ul>
-                <li>
+
+              <div class="row gy-4 justify-content: space-evenly" data-aos-delay="150">
+                <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
                     <i class="ri-bank-line ri-1x"></i>
                     Deposits
                     <div id="user-total-deposits-usd">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
-                </li>
-                <li>
+                </div>
+                <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
                     <i class="ri-coins-line ri-1x"></i>
                     Rewards
                     <div id="user-dividends-and-referrals">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
-                </li>
-                <li>
+                </div>
+                <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
                     <i class="ri-wallet-2-line ri-1x"></i>
                     Withdrawn
                     <div id="user-total-withdrawn">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
-                </li>
-                <li>
+                </div>
+                <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
                     <i class="ri-user-2-line ri-1x"></i>
                     <span>Referrals (<span id="user-referral-count">0</span>)</span>
                     <div id="user-total-referrals">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
 
               <div class="timer">
                 <i class="bi-hourglass-split"></i>
@@ -362,8 +367,9 @@
                 <button class="btn withdraw-btn" onclick="withdraw()" role="button">Withdraw Rewards</button>
               </div>
               <div class="referral-link">
-                <strong>Earn 5% when someone uses your referral link: </strong><a id="reflink"></i></a><span
+                <strong>Earn 5% when someone uses your referral link: </strong><a id="reflink"></a><span
                   onclick="copyRef()"><i class="ri-file-copy-line"></i><span id="copied"></span>
+                </span>
               </div>
 
               <div class="deposits">

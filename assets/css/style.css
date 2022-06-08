@@ -161,15 +161,20 @@ h6 {
 --------------------------------------------------------------*/
 .connect-btn {
   color: #fff;
-  border-radius: 4px;
+  border-radius: 5px;
   white-space: nowrap;
   transition: 0.3s;
   font-size: 14px;
-  border: 2px solid #fff;
+  border: 1px solid #000;
+  background: #ffc451;
+  width: 100px;
+  font-size: 15px;
+  font-weight: 600;
 }
 .connect-btn:hover {
-  background: #ffbb38;
-  color: #343a40;
+  background: #624a09;
+  color: #fff;
+  border-color: #ffc451;
 }
 @media (max-width: 992px) {
   .connect-btn {
@@ -466,6 +471,7 @@ h6 {
 #hero h1 {
   margin: 0;
   padding-bottom: 50px;
+  padding-top: 80px;
   font-weight: bold;
   line-height: 64px;
   color: #000;
@@ -497,7 +503,7 @@ h6 {
   box-shadow: 0px 5px 20px rgb(255 255 255 / 30%),
     inset 0px 0px 0px rgb(0 0 0 / 32%);
   border-radius: 10px;
-  height: auto;
+  height: 100%;
   overflow-wrap: anywhere;
   text-align: center;
   color: white;
@@ -514,7 +520,7 @@ h6 {
 }
 
 .hero-row {
-  margin: 43px;
+  padding: 25px;
 }
 
 #hero h4 {
@@ -619,8 +625,8 @@ h6 {
   width: auto;
   text-align: center;
   margin-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
   border-radius: 10px;
@@ -665,20 +671,24 @@ h6 {
 }
 
 .stats-icon-box {
+  background-color: #000000c4;
   padding: 10px;
   transition: ease-in-out 0.3s;
-  width: 175px;
-  min-width: 100px;
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 5px 20px rgb(255 255 255 / 30%),
+    inset 0px 0px 0px rgb(0 0 0 / 32%);
+  border-radius: 10px;
+  height: 100%;
+  overflow-wrap: anywhere;
   text-align: center;
+  color: white;
 }
 
 @media only screen and (max-width: 480px) {
   .stats-icon-box {
     border: none;
     margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -858,18 +868,17 @@ section {
 }
 
 .services .icon-box {
-  /* plan box backgroun */
   background-color: #000000c4;
-  text-align: center;
-  font-weight: bold;
-  max-width: 400px;
-  /* height: 100%; */
-  margin: 0 auto;
-  padding: 25px 30px 25px 30px;
-  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 5px 20px rgb(255 255 255 / 30%),
+    inset 0px 0px 0px rgb(0 0 0 / 32%);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  /* border: 1px solid #E84142; */
+  height: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+  color: white;
 }
 
 .services .icon-box .icon .img-fluid {
@@ -975,12 +984,12 @@ section {
 }
 
 .deposits {
-  /* margin-right: 1rem; */
-  /* margin-left: 1rem; */
-  /* padding: 15px; */
-  width: inherit;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 15px;
+  /*  width: inherit; */
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 350px) {
   /* horizontal scrollbar for tables if mobile screen */
   .table-dark {
     overflow-x: auto;
