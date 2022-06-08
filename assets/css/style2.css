@@ -204,8 +204,8 @@
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
-.nav-logo {
+.nav-logo2 {
   width: 22px;
   padding-right: 5px;
-  padding-bottom: 3px;
+  padding-bottom: 0px;
 }
