@@ -23,12 +23,13 @@ a:hover {
 }
 
 h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
   color: #fff;
   font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h3,
 h4,
@@ -143,8 +144,7 @@ tr {
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 #header .logo a {
   color: #fff;
@@ -586,21 +586,18 @@ iframe {
     padding-top: 74px;
   }
 }
-
 .avax {
   color: #ffc107;
+  font-weight: bold;
 }
-
 .totals-text {
   color: #fff;
   font-size: 15px;
 }
-
 .totals {
   line-height: 1;
   padding: 5px;
 }
-
 .disclaimer {
   font-size: 13px;
   padding: 15px 10px 15px 10px;
