@@ -206,8 +206,17 @@ tr {
   padding-bottom: 80px;
   margin-top: 50px;
   display: flex;
+  justify-content: space-evenly;
 }
-
+@media (max-width: 1200px) {
+  .youtube {
+    display: grid;
+    padding-bottom: 100px;
+  }
+}
+iframe {
+  margin-bottom: 25px;
+}
 .deposit-btn:hover {
   color: rgba(14, 13, 13, 0.8);
   background-color: #f4c444;
@@ -1223,7 +1232,7 @@ section {
 --------------------------------------------------------------*/
 
 .faq .faq-list {
-  padding: 20px;
+  padding: 40px;
   background: #000000c4;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -1244,15 +1253,39 @@ section {
   color: rgba(255, 255, 255, 0.7);
 }
 .faq .faq-list a {
+  color: #fff;
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  padding: 0 30px;
+  /* padding: 0 30px; */
   outline: none;
   cursor: pointer;
+}
+.faq .faq-list i {
+  font-size: 19px;
+  /* margin-left: 100px; */
+  color: #ffc107;
+}
+.faq .faq-list span {
+  color: #fff;
+  margin-left: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.faq .faq-list h2 {
+  padding-bottom: 30px;
+  padding-top: 20px;
+  display: flex;
+  font-weight: 600;
+  flex-wrap: wrap;
+  color: #ffc107;
+  justify-content: center;
+  font-family: cursive;
 }
 .faq .faq-list .icon-help {
   font-size: 24px;
@@ -1271,7 +1304,8 @@ section {
 .faq .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
-  color: #ffc107;
+  color: #ffffff;
+  padding-left: 100px;
 }
 .faq .faq-list b {
   margin-bottom: 0;
