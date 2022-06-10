@@ -36,6 +36,8 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
 }
+tr {
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -120,9 +122,6 @@ h6 {
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
 }
 /*--------------------------------------------------------------
 # Header
@@ -196,8 +195,8 @@ h6 {
   margin-bottom: 60px;
   margin-top: 50px;
   background-color: #ffc107;
-  box-shadow: 0px 5px 20px rgb(255 255 255 / 30%),
-    inset 0px 0px 0px rgb(0 0 0 / 32%);
+  box-shadow: 0px 0px 5px 1px;
+  border: 1px solid black;
   display: inline-block;
   margin-bottom: 150px;
 }
@@ -229,8 +228,8 @@ h6 {
   /*  margin-bottom: 20px;
   margin-top: 20px; */
   background-color: #ffc107;
-  box-shadow: 0px 5px 20px rgb(255 255 255 / 30%),
-    inset 0px 0px 0px rgb(0 0 0 / 32%);
+  box-shadow: 0px 0px 5px 0px;
+  border: 1px solid black;
   display: inline-block;
 }
 
@@ -287,7 +286,6 @@ h6 {
 .navbar a:hover {
   color: #f4c444;
 }
-,
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
@@ -497,20 +495,36 @@ h6 {
   color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 150px;
 }
 #hero .icon-box {
   /* total avax invested, reffs, lott. contract box */
   background-color: #000000c4;
   padding: 10px;
   transition: ease-in-out 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0px 5px 20px rgb(255 255 255 / 30%),
-    inset 0px 0px 0px rgb(0 0 0 / 32%);
+  border: 1px solid rgba(0, 0, 0, 0.884);
+  box-shadow: 0px 0px 3px rgb(0 0 0), inset 0px 0px 1px 0px rgb(0 0 0 / 86%);
   border-radius: 10px;
   height: 100%;
   overflow-wrap: anywhere;
   text-align: center;
   color: white;
+}
+#hero .icon-box2 {
+  background-color: #000000c4;
+  padding: 10px;
+  transition: ease-in-out 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.795);
+  box-shadow: 0px 0px 3px rgb(0 0 0), inset 0px 0px 1px 0px rgb(0 0 0 / 86%);
+  border-radius: 10px;
+  height: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+  color: #fff;
+  display: inherit;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 380px;
 }
 #hero .icon-box i {
   font-size: 15px;
@@ -524,7 +538,11 @@ h6 {
 }
 
 .hero-row {
+  padding: 15px;
+}
+.hero-row2 {
   padding: 25px;
+  display: grid;
 }
 
 #hero h4 {
@@ -958,6 +976,8 @@ section {
   margin-top: 15px;
   display: inline-block;
   background-color: #ffc107; /* invest button back color */
+  box-shadow: 0px 0px 5px 1px;
+  border: 1px solid black;
 }
 
 .btn-invest:hover {
@@ -980,6 +1000,8 @@ section {
   margin-bottom: 10px;
   display: inline-block;
   background-color: #ffc107;
+  box-shadow: 0px 0px 5px 1px;
+  border: 1px solid black;
 }
 
 .btn-reinvest:hover {

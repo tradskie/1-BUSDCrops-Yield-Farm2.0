@@ -28,13 +28,34 @@
     <meta name="twitter:image" content="https://busd.cropsfarmer.online/assets/img/cropslogo.PNG" />
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <!-- scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/interface_20220527_1434.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/main_eth_20220527_1434.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
 
     <!-- Google Fonts -->
     <link
@@ -171,11 +192,11 @@
               <a class="nav-link" href="https://t.me/busdcropfarmer" target="_blank"><img class="contract-logo"
                   id="telegram" alt="" src="assets/img/telegram.svg">Telegram</a>
             </li>
-            <li>
+            <!--     <li>
               <a class="nav-link">
                 <button id="enableMetamask" class="connect-btn" onclick="myConnect()"><span> Connect</span></button>
               </a>
-            </li>
+            </li> -->
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -184,32 +205,28 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center justify-content-center">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="150">
+      <div class="container">
+        <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-8">
             <h1> The <strong class="avax"> BUSD </strong> Crops Yield Farmer </h1>
           </div>
         </div>
 
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="150">
+        <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-8">
             <h2 style="color:black">Choose your ROI <strong class="avax"> 2%/2.5%/3%/3.5% STATIC</strong> APR Daily.
             </h2>
           </div>
         </div>
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="150">
-          <a href="#services" class="deposit-btn scrollto">Invest</a>
-        </div>
 
-        <div class="row gy-4 justify-content-center" data-aos="zoom-in" data-aos-delay="150">
+        <div class="row gy-4 justify-content-center">
           <div class="col-xl-2 col-md-4 hero-row">
             <div class="icon-box">
               <div class="header">
                 <i class="bi-bank"></i>
-                <span>Total Invested</span>
-                <!--Contract Balance?-->
+                <span>Invested</span>
               </div>
-              <strong id="total-invested" class="number">-</strong>
+              <strong id="total-invested" class="number">442,884.84</strong>
               <div>
                 <strong class="avax">BUSD</strong>
               </div>
@@ -219,11 +236,28 @@
             <div class="icon-box">
               <div class="header">
                 <i class="bi-bank"></i>
-                <span>Contract Balance</span>
+                <span>Balance</span>
               </div>
-              <strong id="contract-balance" class="number">-</strong>
+              <strong id="contract-balance" class="number">313,942.92</strong>
               <div>
                 <strong class="avax">BUSD</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-4 hero-row">
+            <div class="icon-box">
+              <div class="header">
+                <i class="bi-wallet2"></i>
+                <span>Spend Limit</span>
+              </div>
+              <strong class="number mb-md-2 busd" id="spend-limit">0.00</strong>
+              <div>
+                <div>
+                  <strong class="avax">BUSD</strong>
+                  <button class="approve-btn" onclick="approve()" role="button">Approve</button>
+                </div>
+                <div>
+                </div>
               </div>
             </div>
           </div>
@@ -234,7 +268,7 @@
                 <span>User Balance</span>
               </div>
               <div>
-                <strong id="user-balance" class="number">-</strong>
+                <strong id="user-balance" class="number">0.00</strong>
               </div>
               <div>
                 <strong class="avax">BUSD</strong>
@@ -246,10 +280,10 @@
               <div class="header">
                 <i class="bi-people"></i>
                 <span>Referrals</span>
-                (<span id="ref-count">0</span>)
+                (<span id="user-total-referrals">0</span>)
               </div>
               <div>
-                <strong id="user-total-referrals" class="number">-</strong>
+                <strong id="user-referral-total-bonus" class="number">0.00</strong>
               </div>
               <div>
                 <strong class="avax">BUSD</strong>
@@ -257,14 +291,13 @@
             </div>
           </div>
         </div>
-      </div>
     </section> <!-- End Hero -->
 
     <main id="main">
 
       <!-- ======= Plans Section ======= -->
       <section id="services" class="d-flex services align-items-center justify-content-center">
-        <div class="container" data-aos="fade-up">
+        <div class="container">
           <div class="row gy-4 mt-1">
             <div class="col-lg-3 col-md-5">
               <div class="icon-box">
@@ -273,13 +306,11 @@
                 </div>
                 <h5>max deposit: 30 <strong class="avax">BUSD</strong></h5>
                 <h5>max deposit: 6,000 <strong class="avax">BUSD</strong></h5>
-                <!--  <h5>active deposits: <span id="active-invest1">0</span> <strong class="avax">BUSD</strong></h5> 
-                <h5>available: <span id="available1">0</span> <strong class="avax">BUSD</strong></h5>  -->
-                <input class="form-control" id="eth-to-spend1" name="spend" step="1" type="number" value="" hidden>
-                <button class="btn btn-invest" id="invest-btn1" onclick="investInPlan(0)" role="button"
-                  disabled>INVEST</button>
-                <button class="btn btn-reinvest" id="reinvest-btn1" onclick="reinvestInPlan(0)" role="button"
-                  disabled>COMPOUND +5%</button>
+                <h5>active deposits: <span id="active-invest1">0</span> <strong class="avax">BUSD</strong></h5>
+                <h5>available: <span id="available1">0</span> <strong class="avax">BUSD</strong></h5>
+                <input class="form-control" id="eth-to-spend1" name="spend" step="10" type="number" value="1000">
+                <button class="btn btn-invest" onclick="investInPlan1()" role="button">Invest</button>
+                <button class="btn btn-reinvest" onclick="ReinvestInPlan1()" role="button">Compound +5%</button>
                 <p>Next Compound: <span id="user-checkpoint-1"> ?</span></p>
               </div>
             </div>
@@ -291,14 +322,12 @@
                 </div>
                 <h5>min deposit: 40 <strong class="avax">BUSD</strong></h5>
                 <h5>max deposit: 8,000 <strong class="avax">BUSD</strong></h5>
-                <!--  <h5>active deposits: <span id="active-invest2">0</span> <strong class="avax">BUSD</strong></h5> 
-                <h5>available: <span id="available2">0</span> <strong class="avax">BUSD</strong></h5>  -->
-                <input class="form-control" id="eth-to-spend2" name="spend" step="1" type="number" value="" hidden>
-                <button class="btn btn-invest" id="invest-btn2" onclick="investInPlan(1)" role="button"
-                  disabled>INVEST</button>
-                <button class="btn btn-reinvest" id="reinvest-btn2" onclick="reinvestInPlan(1)" role="button"
-                  disabled>COMPOUND +5%</button>
-                <p>Next Compound: <span id="user-checkpoint-1"> ?</span></p>
+                <h5>active deposits: <span id="active-invest2">0</span> <strong class="avax">BUSD</strong></h5>
+                <h5>available: <span id="available2">0</span> <strong class="avax">BUSD</strong></h5>
+                <input class="form-control" id="eth-to-spend2" name="spend" step="10" type="number" value="1000">
+                <button class="btn btn-invest" onclick="investInPlan2()" role="button">Invest</button>
+                <button class="btn btn-reinvest" onclick="ReinvestInPlan2()" role="button">Compound +5%</button>
+                <p>Next Compound: <span id="user-checkpoint-2"> ?</span></p>
               </div>
             </div>
 
@@ -309,14 +338,12 @@
                 </div>
                 <h5>min deposit: 50 <strong class="avax">BUSD</strong></h5>
                 <h5>max deposit: 10,000 <strong class="avax">BUSD</strong></h5>
-                <!--   <h5>active deposits: <span id="active-invest3">0</span> <strong class="avax">BUSD</strong></h5> 
-                <h5>available: <span id="available3">0</span> <strong class="avax">BUSD</strong></h5> -->
-                <input class="form-control" id="eth-to-spend3" name="spend" step="1" type="number" value="" hidden>
-                <button class="btn btn-invest" id="invest-btn3" onclick="investInPlan(2)" role="button"
-                  disabled>INVEST</button>
-                <button class="btn btn-reinvest" id="reinvest-btn3" onclick="reinvestInPlan(2)" role="button"
-                  disabled>COMPOUND +5%</button>
-                <p>Next Compound: <span id="user-checkpoint-1"> ?</span></p>
+                <h5>active deposits: <span id="active-invest3">0</span> <strong class="avax">BUSD</strong></h5>
+                <h5>available: <span id="available3">0</span> <strong class="avax">BUSD</strong></h5>
+                <input class="form-control" id="eth-to-spend3" name="spend" step="10" type="number" value="1000">
+                <button class="btn btn-invest" onclick="investInPlan3()" role="button">Invest</button>
+                <button class="btn btn-reinvest" onclick="ReinvestInPlan3()" role="button">Compound +5%</button>
+                <p>Next Compound: <span id="user-checkpoint-3"> ?</span></p>
               </div>
             </div>
 
@@ -327,14 +354,12 @@
                 </div>
                 <h5>min deposit: 35 <strong class="avax">BUSD</strong></h5>
                 <h5>max deposit: 12,000 <strong class="avax">BUSD</strong></h5>
-                <!--  <h5>active deposits: <span id="active-invest4">0</span> <strong class="avax">BUSD</strong></h5> 
-                <h5>available: <span id="available4">0</span> <strong class="avax">BUSD</strong></h5>  -->
-                <input class="form-control" id="eth-to-spend4" name="spend" step="1" type="number" value="" hidden>
-                <button class="btn btn-invest" id="invest-btn4" onclick="investInPlan(3)" role="button"
-                  disabled>INVEST</button>
-                <button class="btn btn-reinvest" id="reinvest-btn4" onclick="reinvestInPlan(3)" role="button"
-                  disabled>COMPOUND +5%</button>
-                <p>Next Compound: <span id="user-checkpoint-1"> ?</span></p>
+                <h5>active deposits: <span id="active-invest4">0</span> <strong class="avax">BUSD</strong></h5>
+                <h5>available: <span id="available4">0</span> <strong class="avax">BUSD</strong></h5>
+                <input class="form-control" id="eth-to-spend4" name="spend" step="10" type="number" value="1000">
+                <button class="btn btn-invest" onclick="investInPlan4()" role="button">Invest</button>
+                <button class="btn btn-reinvest" onclick="ReinvestInPlan4()" role="button">Compound +5%</button>
+                <p>Next Compound: <span id="user-checkpoint-4"> ?</span></p>
               </div>
             </div>
           </div>
@@ -343,16 +368,16 @@
 
       <!-- ======= Dashboard Section ======= -->
       <section id="dashboard" class="services">
-        <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="container">
           <div class="section-title">
             <div class="stats-container">
 
-              <div class="row gy-4 justify-content: space-evenly" data-aos-delay="150">
+              <div class="row gy-4 justify-content: space-evenly">
                 <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
                     <i class="ri-bank-line ri-1x"></i>
-                    Deposits
-                    <div id="user-total-deposits-usd">0</div>
+                    User Deposits
+                    <div id="user-deposits">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
                 </div>
@@ -367,16 +392,19 @@
                 <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
                     <i class="ri-wallet-2-line ri-1x"></i>
-                    Withdrawn
+                    User Withdrawn
                     <div id="user-total-withdrawn">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
                 </div>
                 <div class="col-xl-2 col-md-4 hero-row">
                   <div class="stats-icon-box">
-                    <i class="ri-user-2-line ri-1x"></i>
-                    <span>Referrals (<span id="user-referral-count">0</span>)</span>
-                    <div id="user-total-referrals">0</div>
+                    <!-- <i class="ri-user-2-line ri-1x"></i>
+                      <span>Referrals (<span id="user-total-referrals">0</span>)</span>
+                    <div id="user-referral-total-bonus">0</div> -->
+                    <i class="ri-wallet-2-line ri-1x"></i>
+                    <span> Available </span>
+                    <div id="user-available">0</div>
                     <strong class="avax">BUSD</strong>
                   </div>
                 </div>
@@ -385,7 +413,7 @@
               <div class="timer">
                 <i class="bi-hourglass-split"></i>
                 Claim within
-                <span id="claim-timer">0</span>
+                <span id="user-withdraw-countdown">?</span>
               </div>
               <div>
                 <button class="btn withdraw-btn" onclick="withdraw()" role="button">Withdraw Rewards</button>
@@ -396,16 +424,31 @@
                 </span>
               </div>
 
-              <div class="deposits">
-                <table class="table table-bordered table-dark">
+              <div class="div-deposits">
+                <table id="table-deposits" class="table-deposits">
                   <thead class="thead-dark">
                     <tr>
-                      <th style="width: 15%">#</th>
-                      <th style="width: 16%">Plan</th>
-                      <th style="width: 16%">Rate</th>
-                      <th style="width: 19%">Invested</th>
-                      <th style="width: 17%">Start</th>
-                      <th style="width: 17%">Finish</th>
+                      <th style="width: 10%">Plan
+                        <hr>
+                      </th>
+                      <th style="width: 5%">Rate
+                        <hr>
+                      </th>
+                      <th style="width: 20%">Invested
+                        <hr>
+                      </th>
+                      <th style="width: 20%">Start
+                        <hr>
+                      </th>
+                      <th style="width: 20%">Finish
+                        <hr>
+                      </th>
+                      <th style="width: 20%">Remaining
+                        <hr>
+                      </th>
+                      <th style="width: 10%">Compound
+                        <hr>
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -422,12 +465,7 @@
 
       <!-- ======= Frequently Asked Questions Section ======= -->
       <section id="faq" class="faq section-faq">
-        <div class="container" data-aos="fade-up">
-          <!-- <div class="justify-content-center youtube" data-aos="fade-up">
-          <div>
-            <iframe width="700" height="400" src="https://www.youtube.com/embed/yPi9QRLXweA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div> -->
+        <div class="container">
           <div class="faq-list">
             <div id="main-wrapper">
               <div class="container">
@@ -485,6 +523,17 @@
       </section> <!-- End Frequently Asked Questions Section -->
     </main> <!-- End #main -->
 
+    <div class="youtube">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/WabMYJjWSO0" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/5ExJ58GRuP4" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+
+
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="container">
@@ -497,19 +546,9 @@
     </footer> <!-- End Footer -->
 
     <!-- ======= Preloader ======= -->
-    <div id="preloader"></div> <!-- Preloader -->
+    <div id=""></div> <!-- Preloader -->
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/main_eth.js"></script>
   </body>
 
 </html>
