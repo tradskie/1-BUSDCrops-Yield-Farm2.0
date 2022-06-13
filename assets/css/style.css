@@ -131,7 +131,7 @@ tr {
   transition: all 0.5s;
   z-index: 997;
   padding: 5px;
-  background: #624a09;
+  background: #000000c4;
 }
 
 #header.header-scrolled,
@@ -299,7 +299,7 @@ iframe {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #fff;
+  color: #ffc107;
 }
 .navbar .dropdown ul {
   display: block;
