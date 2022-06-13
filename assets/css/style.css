@@ -263,6 +263,7 @@ iframe {
 }
 .navbar {
   padding: 0;
+  margin: auto;
 }
 .navbar ul {
   margin: 0;
