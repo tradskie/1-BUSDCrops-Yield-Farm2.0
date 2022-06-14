@@ -314,16 +314,20 @@
     color: white;
     font-size: 9px;
   }
-  .thead-dark {
-  }
+}
+.thead-dark {
+}
 
-  .main-wrapper h2 {
-    justify-content: center;
-    display: flex;
-    font-size: 200px;
-  }
+.main-wrapper h2 {
+  justify-content: center;
+  display: flex;
+  font-size: 200px;
 }
 .number {
   display: grid;
   margin: 5px;
+}
+.faqbox {
+  justify-content: end;
+  display: grid;
 }
