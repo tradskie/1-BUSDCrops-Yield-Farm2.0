@@ -253,6 +253,21 @@
   display: inline-flex;
   /* position: static; */
 }
+.approve-btn:hover {
+  color: #000;
+  border-radius: 7px;
+  border: 1px solid #000;
+  max-height: 30px;
+  padding-bottom: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #aa904a;
+  box-shadow: 0px 0px 5px 1px;
+  width: 80px;
+  flex: inherit;
+  display: inline-flex;
+  /* position: static; */
+}
 @media (max-width: 250px) {
   .approve-btn {
     color: #000;
